@@ -103,36 +103,49 @@
     }
     .cite-section pre {
       font-size: 16px;
-      background-color: #f4f4f4;
+      background-color: #f4f4f400;
       padding: 15px;
       border-radius: 5px;
       white-space: pre-wrap;
       word-wrap: break-word;
     }
 
-    /* Social Icons (black squares) */
     .social-icons {
-      margin-top: 15px;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin-right: 8px;
-      text-decoration: none;
-      color: #fff;
-      background-color: #000; /* black background */
-      width: 40px;
-      height: 40px;
-      border-radius: 5px;
-      text-align: center;
-      line-height: 40px; /* vertically center the icon */
-    }
-    .social-icons a:hover {
-      background-color: #444; /* slightly lighter on hover */
-    }
-    .social-icons i {
-      text-align: center;
-      font-size: 18px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  gap: 10px;  /* space between icons */
+}
+
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px; /* vertically centers the icon */
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.9;
+}
+
+/* Brand colors for each icon */
+.social-email    { background-color: #D44638 !important; } /* Gmail red or similar */
+.social-twitter  { background-color: #1DA1F2 !important; } /* Twitter blue */
+.social-linkedin { background-color: #0077B5 !important; } /* LinkedIn blue */
+.social-facebook { background-color: #1877F2 !important; } /* Facebook blue */
+.social-reddit   { background-color: #FF4500 !important; } /* Reddit orange */
+.social-mendeley { background-color: #2B7BB9 !important; } /* Mendeley blue */
+
+.social-icons i {
+  font-size: 18px;
+}
+
   </style>
 
   <script>
@@ -246,7 +259,8 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents</h1><br>
           <h2 class="subtitle">Md Monjurul Karim, Dong Hoang Van, Sangeen Khan, Qiang Qu, and Yaroslav Kholodov</h2>
-          <h2 class="subtitle">Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences <br> University of Science and Technology Beijing, Innopolis University</h2>
+          <h2 class="subtitle">Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, University of Science and Technology Beijing, Innopolis University</h2>
+          <p> AI agent; blockchain; decentralized AI; large language model; multi-agent collaboration; Web3</p>
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
@@ -260,15 +274,49 @@
                 <a href="static/pdf/karim2025ai.pdf" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fas fa-link"></i></span>
-                <span>Slide</span>
+                <span>Presentation</span>
                 </a>
               </span>
+            </div>
+
+            <div class="social-icons">
+              <!-- Email -->
+              <a href="mailto:...?subject=..." title="Email" class="social-email">
+                <i class="fas fa-envelope-square" style="font-size: 15px;"></i>
+              </a>
+              <!-- X (Twitter) -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            
+            <a href="https://x.com/intent/post?text=AI%20Agents%20Meet%20Blockchain%3A%20A%20Survey%20on%20Secure%20and%20Scalable%20Collaboration%20for%20Multi-Agents&hashtags=mdpifutureinternet&url=https%3A%2F%2Fwww.mdpi.com%2F3164582&via=FutureInternet6"
+             onclick="windowOpen(this.href,600,800); return false"
+             target="_blank" rel="noopener noreferrer" class="social-twitter">
+            <!-- Use the X icon from Font Awesome 6.4+ -->
+            <i class="fa-brands fa-twitter" style="font-size: 15px;"></i>
+            </a>
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.mdpi.com%2F3164582" title="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-linkedin">
+                <i class="fab fa-linkedin-in" style="font-size: 15px;"></i>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/sharer.php?u=https://www.mdpi.com/3164582" title="Facebook" target="_blank" rel="noopener noreferrer" class="social-facebook">
+                <i class="fab fa-facebook-square" style="font-size: 15px;"></i>
+              </a>
+              <!-- Reddit -->
+              <a href="http://www.reddit.com/submit?url=https://www.mdpi.com/3164582" title="Reddit" target="_blank" rel="noopener noreferrer" class="social-reddit">
+                <i class="fab fa-reddit-square" style="font-size: 20px;"></i>
+              </a>
+              <!-- Mendeley -->
+              <a href="http://www.mendeley.com/import/?url=https://www.mdpi.com/3164582" title="Mendeley" target="_blank" rel="noopener noreferrer" class="social-mendeley">
+                <i class="fab fa-mendeley" style="font-size: 20px;"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
 </section>
 
 <!-- Paper abstract -->
@@ -327,7 +375,7 @@
 </section>
 
 
-<!-- Useful Links Section -->
+<!-- Useful Links Section>
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Useful Links</h2>
@@ -343,12 +391,12 @@
       <li><a href="https://www.delysium.com/" target="_blank">Delysium</a></li>
     </ol>
   </div>
-</section>
+</section-->
 
 
 <!-- Cite Our Work Section -->
 <section class="section cite-section">
-  <h2>Cite the Work</h2>
+  <h2>Cite Our Paper</h2>
   <pre>@article{karim2025ai,
   title={AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents},
   author={Karim, Md Monjurul and Van, Dong Hoang and Khan, Sangeen and Qu, Qiang and Kholodov, Yaroslav},
@@ -358,12 +406,29 @@
   number={2}
   }</pre>
 
- 
+  <div class="container is-max-desktop">
+    <div class="content has-text-left">
+    <!--h2 class="title is-3">References</h2-->
+    <div class="content">
+      <h3>MDPI and ACS Style</h3>
+      <p>Karim, M.M.; Van, D.H.; Khan, S.; Qu, Q.; Kholodov, Y. AI Agents Meet Blockchain: AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents. <i>Future Internet</i> <b>2025</b>, <i>17</i>, 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
+
+      <h3>AMA Style</h3>
+      <p>Karim MM, Van DH, Khan S, Qu Q, Kholodov Y. AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents. <i>Future Internet</i>. 2025;17(2):57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
+
+      <h3>Chicago/Turabian Style</h3>
+      <p>Karim, Md Monjurul, Dong Hoang Van, Sangeen Khan, Qiang Qu, and Yaroslav Kholodov. 2025. “AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents.” <i>Future Internet</i> 17, no. 2 (2025): 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
+
+      <h3>APA Style</h3>
+      <p>Karim, M. M., Van, D. H., Khan, S., Qu, Q., & Kholodov, Y. (2025). <i>AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents</i>. <i>Future Internet</i>, 17(2), 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
+    </div>
+  </div>
+  </div>
   
 </section>
 
 <!-- References Section -->
-<section class="section">
+<!--section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">References</h2>
     <div class="content">
@@ -380,7 +445,7 @@
       <p>Karim, M. M., Van, D. H., Khan, S., Qu, Q., & Kholodov, Y. (2025). <i>AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents</i>. <i>Future Internet</i>, 17(2), 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
     </div>
   </div>
-</section>
+</section-->
 
 <!-- End New Centered Image Section -->
 <section class="section">
@@ -397,46 +462,14 @@
         </a>
       </div>
       <div class="column is-one-third">
-                <a href="https://innopolis.university/en/" target="_blank">
+        <a href="https://innopolis.university/en/" target="_blank">
         <img src="static/images/innopolis.png" alt="Image 3" style="max-width:150px; border-radius: 5px;">
-                </a>
+      </a>
       </div>
     </div>
   </div>
 </section>
 <!-- End Centered Image Section -->
-
-<div class="social-icons" style="display: flex; justify-content: center; align-items: center; margin: 15px auto;">
-  <!-- Email -->
-  <a href="mailto:...?subject=..." title="Email">
-    <i class="fas fa-envelope-square" style="font-size: 15px;"></i>
-  </a>
-  <!-- X (Twitter) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<a href="https://x.com/intent/post?text=AI%20Agents%20Meet%20Blockchain%3A%20A%20Survey%20on%20Secure%20and%20Scalable%20Collaboration%20for%20Multi-Agents&hashtags=mdpifutureinternet&url=https%3A%2F%2Fwww.mdpi.com%2F3164582&via=FutureInternet6"
- onclick="windowOpen(this.href,600,800); return false"
- target="_blank" rel="noopener noreferrer">
-<!-- Use the X icon from Font Awesome 6.4+ -->
-<i class="fa-brands fa-twitter" style="font-size: 15px;"></i>
-</a>
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.mdpi.com%2F3164582" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin-in" style="font-size: 15px;"></i>
-  </a>
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/sharer.php?u=https://www.mdpi.com/3164582" title="Facebook" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-facebook-square" style="font-size: 15px;"></i>
-  </a>
-  <!-- Reddit -->
-  <a href="http://www.reddit.com/submit?url=https://www.mdpi.com/3164582" title="Reddit" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-reddit-square" style="font-size: 20px;"></i>
-  </a>
-  <!-- Mendeley -->
-  <a href="http://www.mendeley.com/import/?url=https://www.mdpi.com/3164582" title="Mendeley" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-mendeley" style="font-size: 20px;"></i>
-  </a>
-</div>
 
 
 

@@ -120,6 +120,27 @@
       word-wrap: break-word;
     }
 
+    /* Reduce vertical spacing around this particular section */
+.cite-section {
+  margin-top: 0.05rem !important;  /* Decrease from Bulma's default */
+  margin-bottom: 0.05rem !important;
+}
+
+/* Reduce the margin on headings within the cite-section */
+.cite-section h3 {
+  margin-top: 0.01rem;
+  margin-bottom: 0.01rem;
+}
+.cite-section h4 {
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+  }
+
+/* Adjust paragraph spacing as well */
+.cite-section p {
+  margin-bottom: 0.0000001rem; /* or whatever spacing you prefer */
+}
+
     .social-icons {
   display: flex;
   justify-content: center;
@@ -411,15 +432,15 @@
     <div class="content has-text-left">
     <!--h2 class="title is-3">References</h2-->
     <!--div class="section cite-section"-->
-      <h3>MDPI and ACS Style</h3>
+      <h4>MDPI and ACS Style</h4>
       <p>Karim, M.M.; Van, D.H.; Khan, S.; Qu, Q.; Kholodov, Y. AI Agents Meet Blockchain: AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents. <i>Future Internet</i> <b>2025</b>, <i>17</i>, 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
-      <h3>AMA Style</h3>
+      <h4>AMA Style</h4>
       <p>Karim MM, Van DH, Khan S, Qu Q, Kholodov Y. AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents. <i>Future Internet</i>. 2025;17(2):57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
-      <h3>Chicago/Turabian Style</h3>
+      <h4>Chicago/Turabian Style</h4>
       <p>Karim, Md Monjurul, Dong Hoang Van, Sangeen Khan, Qiang Qu, and Yaroslav Kholodov. 2025. “AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents.” <i>Future Internet</i> 17, no. 2 (2025): 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
-      <h3>APA Style</h3>
+      <h4>APA Style</h4>
       <p>Karim, M. M., Van, D. H., Khan, S., Qu, Q., & Kholodov, Y. (2025). <i>AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents</i>. <i>Future Internet</i>, 17(2), 57. <a href="https://doi.org/10.3390/fi17020057" target="_blank">https://doi.org/10.3390/fi17020057</a></p>
-      <h3>Bibtex</h3>
+      <h4>Bibtex</h4>
       <p>@article{karim2025ai,
         title={AI Agents Meet Blockchain: A Survey on Secure and Scalable Collaboration for Multi-Agents},<br>
         author={Karim, Md Monjurul and Van, Dong Hoang and Khan, Sangeen and Qu, Qiang and Kholodov, Yaroslav},<br>
@@ -433,8 +454,8 @@
   </div>
   
 </section>
+
   
-</section>
 
 <!-- References Section -->
 <!--section class="section">
